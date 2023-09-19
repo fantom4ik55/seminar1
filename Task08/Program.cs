@@ -12,8 +12,8 @@
 Console.WriteLine("Введите число");
 int Number = Convert.ToInt32(Console.ReadLine());
 
-for (int index=1;index<=Number;index++)
+for (int index = 1; index <= Number; index++)
 {
-if (index % 2 == 0)
-Console.WriteLine (index + ",");
+    if (index % 2 == 0)
+        Console.WriteLine(index + ",");
 }
