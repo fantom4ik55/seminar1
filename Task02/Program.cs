@@ -8,10 +8,23 @@
 // a=2; b=10 -> max=10
 // a=-9; b= -3 -> max=-3
 
-Console.WriteLine("Введите первое число:");
-int a = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите второе число:");
-int b = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine(a>b? "Первое число больше второго" : "Второе число больше первого");
+Console.WriteLine("Пожалуйста введите 2 числа,");
+Console.WriteLine("чтобы узнать какое большее, а какое меньшее.");
+Console.Write("Введите первое число: ");
+int number1 = int.Parse(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int number2 = int.Parse(Console.ReadLine());
+if (number1 > number2)
+{
+    Console.WriteLine("Число " + number1 + " большее");
+    Console.Write("Число " + number2 + " меньшее");
+}
+else if (number1 == number2)
+{
+    Console.WriteLine("Число " + number1 + " равно числу " + number2);
+}
+else
+{
+    Console.WriteLine("Число " + number2 + " большее");
+    Console.Write("Число " + number1 + " меньшее");
+}
