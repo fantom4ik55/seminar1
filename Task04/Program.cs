@@ -10,7 +10,7 @@
 // 22, 3, 9 -> 22
 
 
-Console.WriteLine("Введите число");
+Console.WriteLine("Введите три числа:");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число");
 int b = Convert.ToInt32(Console.ReadLine());

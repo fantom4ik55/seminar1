@@ -8,7 +8,7 @@
 // a=2; b=10 -> max=10
 // a=-9; b= -3 -> max=-3
 
-Console.WriteLine("Пожалуйста введите 2 числа,");
+Console.WriteLine("Введите два числа:");
 Console.WriteLine("чтобы узнать какое большее, а какое меньшее.");
 Console.Write("Введите первое число: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
