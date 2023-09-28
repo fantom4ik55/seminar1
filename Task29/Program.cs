@@ -9,15 +9,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Создаем генератор рандомных чисел
         Random random = new Random();
 
         int[] numbers = new int[8];
 
-        // Заполняем массив рандомными числами
         for (int i = 0; i < numbers.Length; i++)
         {
-            numbers[i] = random.Next(1, 99); // Генерируем рандомное число от 1 до 99
+            numbers[i] = random.Next(1, 99);
         }
 
         Console.Write("[");
