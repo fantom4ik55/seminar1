@@ -11,12 +11,12 @@
 Console.WriteLine("Введите размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
 int[] numbers = new int[size];
-FillArrayRandomNumbers(numbers);
+FillArrayRandomNum(numbers);
 
 PrintArray(numbers);
 int sum = 0;
 
-void FillArrayRandomNumbers(int[] numbers)
+void FillArrayRandomNum(int[] numbers)
 {
     for (int i = 0; i < numbers.Length; i++)
     {
