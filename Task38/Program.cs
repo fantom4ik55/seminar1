@@ -10,13 +10,13 @@ Console.WriteLine("Введите размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
 
 double[] numbers = new double[size];
-FillArrayRandomNum(numbers);
+PrintArrayDouble(numbers);
 PrintArray(numbers);
 
 double min = Int32.MaxValue;
 double max = Int32.MinValue;
 
-void FillArrayRandomNum(double[] numbers)
+void PrintArrayDouble(double[] numbers)
 {
     for (int i = 0; i < numbers.Length; i++)
     {
