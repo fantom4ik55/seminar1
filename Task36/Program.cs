@@ -15,6 +15,7 @@ FillArrayRandomNumbers(numbers);
 
 PrintArray(numbers);
 int sum = 0;
+
 void FillArrayRandomNumbers(int[] numbers)
 {
     for (int i = 0; i < numbers.Length; i++)
@@ -22,9 +23,6 @@ void FillArrayRandomNumbers(int[] numbers)
         numbers[i] = new Random().Next(1, 100);
     }
 }
-
-
-
 
 for (int arr = 0; arr < numbers.Length; arr += 2)
     sum = sum + numbers[arr];
