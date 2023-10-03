@@ -36,7 +36,7 @@ for (int arr = 0; arr < numbers.Length; arr++)
     }
 }
 
-Console.WriteLine($"-> {max - min}");
+Console.WriteLine($"-> {max} - {min}={max - min}");
 
 
 void PrintArray(double[] numbers)
