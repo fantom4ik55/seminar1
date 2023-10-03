@@ -15,23 +15,27 @@ FillArrayRandomNumbers(numbers);
 PrintArray(numbers);
 int count = 0;
 
-for (int arr = 0; arr < numbers.Length; arr++)
-if (numbers[arr] % 2 == 0)
-count++;
-
-Console.WriteLine($"-> чётных {count} значения "); 
-
 void FillArrayRandomNumbers(int[] numbers)
 {
-    for(int i = 0; i < numbers.Length; i++)
+    for (int i = 0; i < numbers.Length; i++)
     {
-        numbers[i] = new Random().Next(100,1000);
+        numbers[i] = new Random().Next(100, 1000);
     }
 }
+
+
+
+for (int arr = 0; arr < numbers.Length; arr++)
+    if (numbers[arr] % 2 == 0)
+        count++;
+
+Console.WriteLine($"-> чётных {count} значения ");
+
+
 void PrintArray(int[] numbers)
 {
     Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
+    for (int i = 0; i < numbers.Length; i++)
     {
         Console.Write(numbers[i] + ", ");
     }

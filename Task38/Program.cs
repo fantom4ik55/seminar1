@@ -18,22 +18,22 @@ double max = Int32.MinValue;
 
 void FillArrayRandomNum(double[] numbers)
 {
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            numbers[i] = Convert.ToDouble(new Random().Next(1,100)); 
-        }
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = Convert.ToDouble(new Random().Next(1, 100));
+    }
 }
 
 for (int arr = 0; arr < numbers.Length; arr++)
 {
     if (numbers[arr] > max)
-        {
-            max = numbers[arr];
-        }
+    {
+        max = numbers[arr];
+    }
     if (numbers[arr] < min)
-        {
-            min = numbers[arr];
-        }
+    {
+        min = numbers[arr];
+    }
 }
 
 Console.WriteLine($"-> {max - min}.");
@@ -42,10 +42,10 @@ Console.WriteLine($"-> {max - min}.");
 void PrintArray(double[] numbers)
 {
     Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write(numbers[i] + ",  ");
-        }
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + ",  ");
+    }
     Console.Write("]");
     Console.WriteLine();
 }

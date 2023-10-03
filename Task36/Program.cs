@@ -15,26 +15,29 @@ FillArrayRandomNumbers(numbers);
 
 PrintArray(numbers);
 int sum = 0;
-
-for (int arr = 0; arr < numbers.Length; arr+=2)
-    sum = sum + numbers[arr];
-
-    Console.WriteLine($" -> {sum}");
-
 void FillArrayRandomNumbers(int[] numbers)
 {
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            numbers[i] = new Random().Next(1,100);
-        }
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = new Random().Next(1, 100);
+    }
 }
+
+
+
+
+for (int arr = 0; arr < numbers.Length; arr += 2)
+    sum = sum + numbers[arr];
+
+Console.WriteLine($" -> {sum}");
+
 void PrintArray(int[] numbers)
 {
     Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write(numbers[i] + ", ");
-        }
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + ", ");
+    }
     Console.Write("]");
     Console.WriteLine();
 }
