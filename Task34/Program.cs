@@ -23,8 +23,6 @@ void FillArrayRandomNumbers(int[] numbers)
     }
 }
 
-
-
 for (int arr = 0; arr < numbers.Length; arr++)
     if (numbers[arr] % 2 == 0)
         count++;
