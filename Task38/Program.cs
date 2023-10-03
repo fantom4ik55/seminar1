@@ -20,7 +20,7 @@ void FillArrayRandomNum(double[] numbers)
 {
     for (int i = 0; i < numbers.Length; i++)
     {
-        numbers[i] = Convert.ToDouble(new Random().Next(1, 100))/10;
+        numbers[i] = Convert.ToDouble(new Random().Next(1, 100)) / 10;
     }
 }
 
@@ -36,7 +36,7 @@ for (int arr = 0; arr < numbers.Length; arr++)
     }
 }
 
-Console.WriteLine($"-> {max} - {min}={max - min}");
+Console.WriteLine($"-> {max} - {min}= {max - min}");
 
 
 void PrintArray(double[] numbers)
