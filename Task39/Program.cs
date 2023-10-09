@@ -5,20 +5,18 @@
 // [6 7 3 6] -> [6 3 7 6]
 
 
-void ReverseArray(int[] arr)
-{
-    for (int i = 1; i < arr.Length / 2; i++)
-    {
-        int temp = arr[i];// 2
-        arr[i] = arr[arr.Length - 1 - i];
-        arr[arr.Length - 1 - i] = temp;
-    }
-}
+// void ReverseArray(int[] arr)
+// {
+//     for (int i = 1; i < arr.Length / 2; i++)
+//     {
+//         int temp = arr[i];// 2
+//         arr[i] = arr[arr.Length - 1 - i];
+//         arr[arr.Length - 1 - i] = temp;
+//     }
+// }
 
-int[] array = CreateArrarRndInt(5, 1, 9);
-PrintArray(array);
-ReverseArray(array);
-PrintArray(array);
-
-// Array.Reverse(array);
+// int[] array = CreateArrarRndInt(5, 1, 9);
 // PrintArray(array);
+// ReverseArray(array);
+// PrintArray(array);
+
