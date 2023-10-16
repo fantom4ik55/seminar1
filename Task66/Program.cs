@@ -4,18 +4,24 @@
 // M = 4; N = 8. -> 30
 
 
-
-
 class Program
 {
     static int Main()
     {
         int m, n;
         Console.Write("Введите значение M: ");
-        m = int.Parse(Console.ReadLine());
+        if (!int.TryParse(Console.ReadLine(), out m) || m <= 0)
+        {
+            Console.WriteLine("Число не натуральное");
+            return 1;
+        }
 
         Console.Write("Введите значение N: ");
-        n = int.Parse(Console.ReadLine());
+        if (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
+        {
+            Console.WriteLine("Число не натуральное");
+            return 1;
+        }
 
         if (m > n)
         {
