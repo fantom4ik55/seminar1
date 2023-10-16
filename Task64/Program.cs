@@ -5,6 +5,7 @@
 
 
 
+
 int ReadData(string line)
 {
     Console.Write(line);
@@ -12,9 +13,9 @@ int ReadData(string line)
     return number;
 }
 
-void PrintResult(string prefix)
+void PrintResult(string result)
 {
-    Console.WriteLine(prefix);
+    Console.WriteLine("\"" + result + "\"");
 }
 
 
@@ -27,12 +28,17 @@ string LineGenRec(int num)
     }
     else
     {
-        
-        return num + " " + LineGenRec (num - 1);
+        return num + " ," + LineGenRec(num - 1);
     }
 }
 
 int number = ReadData("Введите число N: ");
 string resultLine = LineGenRec(number);
+
+if (resultLine.EndsWith(","))
+{
+    resultLine = resultLine.Remove(resultLine.Length - 1);
+}
+
 Console.Write($"N={number}->  ");
 PrintResult(resultLine);
