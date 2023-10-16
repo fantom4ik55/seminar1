@@ -9,14 +9,14 @@ class Program
     static int Main()
     {
         int m, n;
-        Console.Write("Введите значение M: ");
+        Console.Write("Введите натуральное число M: ");
         if (!int.TryParse(Console.ReadLine(), out m) || m <= 0)
         {
             Console.WriteLine("Число не натуральное");
             return 1;
         }
 
-        Console.Write("Введите значение N: ");
+        Console.Write("Введите натуральное число N: ");
         if (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
         {
             Console.WriteLine("Число не натуральное");
