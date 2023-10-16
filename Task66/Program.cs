@@ -1,32 +1,48 @@
-﻿// Задача 66: 
-// Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов 
-// в промежутке от M до N.
+﻿// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N. 
+// Выполнить с помощью рекурсии.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
 
 
-int GetSum(int m, int n)
+
+
+class Program
 {
-    if (n > m)
-        return n + GetSum(m, n - 1);
-    return m;
+    static int Main()
+    {
+        int m, n;
+        Console.Write("Введите значение M: ");
+        m = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите значение N: ");
+        n = int.Parse(Console.ReadLine());
+
+        if (m > n)
+        {
+            int temp = m;
+            m = n;
+            n = temp;
+        }
+
+        int sum = SumNaturalNumbers(m, n);
+        Console.WriteLine($"M={m}; N={n} -> {sum}");
+
+        return 0;
+    }
+
+    static int SumNaturalNumbers(int m, int n)
+    {
+        if (m > n)
+        {
+            return 0;
+        }
+        else if (m <= 0)
+        {
+            return SumNaturalNumbers(m + 1, n);
+        }
+        else
+        {
+            return m + SumNaturalNumbers(m + 1, n);
+        }
+    }
 }
-
-int ReadData(string line)
-{
-    Console.Write(line);
-    int number = int.Parse(Console.ReadLine() ?? "0");
-    return number;
-}
-
-void PrintData(string msg, int res)
-{
-    Console.WriteLine(msg + res);
-}
-
-int m = ReadData("Введите число M: ");
-int n = ReadData("Введите число N: ");
-int sum = GetSum(m, n);
-
-PrintData($"M={m}, N={n}-> ", sum);
-
-
-
